@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room1Scene.unity
     guid: 63b09769d538041a49190e711339c0ea
+  - enabled: 1
+    path: Assets/Scenes/GameWon.unity
+    guid: b50dcdf562ed24caf8cdf40cd93a2106
+  - enabled: 1
+    path: Assets/Scenes/GameOverTMP.unity
+    guid: a9242c1f98b824cb39e85fdf6dad5c88
   m_configObjects: {}
