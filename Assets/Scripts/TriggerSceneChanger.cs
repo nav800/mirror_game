@@ -7,6 +7,7 @@ public class SceneChanger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.tag);
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player entered the trigger zone! Loading scene: " + sceneToLoad);
