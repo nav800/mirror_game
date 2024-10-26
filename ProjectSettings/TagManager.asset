@@ -12,8 +12,8 @@ TagManager:
   - Water
   - UI
   - Badniks
-  - Pitfalls
   - Walls
+  - Tiles
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tilemap
+    uniqueID: 1110127787
+    locked: 0
+  - name: Player
+    uniqueID: 34865813
     locked: 0
