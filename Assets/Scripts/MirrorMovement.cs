@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class MirrorMovement : MonoBehaviour
 {
-    public float Speed;
+
     public Rigidbody2D rb2d;
-    private Vector2 moveInput;
+
+    public GameObject Target; // Assign this in the Inspector
+
+    private Rigidbody2D targetRb2D; // For 2D
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start(){
+        if (Target.TryGetComponent<Rigidbody2D>(out targetRb2D)){
+            Debug.Log("2D Rigidbody found!");
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveInput.x = 0 - Input.GetAxisRaw("Horizontal");
-        moveInput.y = 0 - Input.GetAxisRaw("Vertical");
-
-        moveInput.Normalize();
-
-        rb2d.velocity = moveInput * Speed;
+        if (targetRb2D != null){
+            Vector2 velocity2D = targetRb2D.velocity;
+                
+            rb2d.velocity = new Vector2(-1 * velocity2D.x, velocity2D.y);
+            }
     }
 }

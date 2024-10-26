@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
 
     // Start is called before the first frame update
-    /*void Start()
+    void Start()
     {
         
     }
@@ -23,5 +23,5 @@ public class PlayerMovement : MonoBehaviour
         moveInput.Normalize();
 
         rb2d.velocity = moveInput * Speed;
-    }*/
+    }
 }
