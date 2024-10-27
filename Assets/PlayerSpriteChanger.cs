@@ -7,37 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public Sprite downSprite; // Sprite for moving down
     public Sprite leftSprite; // Sprite for moving left
     public Sprite rightSprite; // Sprite for moving right
-    private bool facingLeft = false;
-
-    public void FlipSprite()
-    {
-        // Toggle the facing direction
-        facingLeft = !facingLeft;
-
-        // Get the current local scale
-        Vector3 localScale = transform.localScale;
-
-        // Multiply x scale by -1 to flip the sprite
-        localScale.x *= -1;
-
-        // Apply the new local scale
-        transform.localScale = localScale;
-    }
-
-    // Example: Flip when moving in a new direction
-    public void Move(float direction)
-    {
-        Debug.Log(direction > 0);
-        // Check if direction change requires a flip
-        if ((direction > 0 && facingLeft) || (direction < 0 && !facingLeft))
-        {
-            FlipSprite();
-        }
-    }
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); // Automatically get the SpriteRenderer component
+        currentFrame = 0;
+        timer = 0f;
     }
 
     void Update()
@@ -49,12 +24,12 @@ public class PlayerMovement : MonoBehaviour
 
         Debug.Log($"Horizontal: {moveHorizontal}, Vertical: {moveVertical}");
 
-        ChangeSprite(moveHorizontal, moveVertical); // Call the function to change the sprite
+        // Call function to animate the walking sprites based on direction
+        AnimateMovement(moveHorizontal, moveVertical);
     }
 
     public void ChangeSprite(float moveHorizontal, float moveVertical)
     {
-
         // Change the sprite based on the movement direction
         if (moveVertical > 0)
         {
@@ -66,11 +41,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (moveHorizontal < 0)
         {
-            spriteRenderer.sprite = rightSprite;
+            spriteRenderer.sprite = leftSprite; // Left
         }
         else if (moveHorizontal > 0)
         {
-            spriteRenderer.sprite = rightSprite;
+            spriteRenderer.sprite = rightSprite; // Right
         }
     }
 }
