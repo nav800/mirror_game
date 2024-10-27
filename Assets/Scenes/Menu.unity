@@ -553,7 +553,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015123796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 531d4790135c95b4bb89d2f48f1524fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 58d495c728bbb7e41a511ccd7e6d6047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Room1
@@ -921,7 +921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f90cf46e8b833e4eac5975deaea1629, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbb69cd284ddc284e99092a622bcae2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
