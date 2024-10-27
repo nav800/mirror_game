@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChanger : MonoBehaviour
+public class MirrorTrigger : MonoBehaviour
 {
     public string sceneToLoad;
 
@@ -10,12 +10,7 @@ public class SceneChanger : MonoBehaviour
         Debug.Log(other.tag);
         if (other.CompareTag("Player"))
         {
-            LoadScene();
+            Debug.Log("Activate the cutscene and the goal");
         }
-    }
-
-    private void LoadScene()
-    {
-        SceneManager.LoadScene(sceneToLoad);
     }
 }
