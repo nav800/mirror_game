@@ -10332,15 +10332,15 @@ PrefabInstance:
     - target: {fileID: 7353514764540040562, guid: 0bb4904ab1df9440ba0f47067c8cef10, type: 3}
       propertyPath: rightSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: d421110665c6447b08e62376525a0fb6, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d465a9180b9bd043972ba1da1dd74ca, type: 3}
     - target: {fileID: 7353514764540040562, guid: 0bb4904ab1df9440ba0f47067c8cef10, type: 3}
       propertyPath: rightSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 5053755aaa9f448edbba6a92be44191a, type: 3}
+      objectReference: {fileID: 21300000, guid: cdd12a0320ede3449bb4411347cc3d64, type: 3}
     - target: {fileID: 7353514764540040562, guid: 0bb4904ab1df9440ba0f47067c8cef10, type: 3}
       propertyPath: rightSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 46ed7f3286c414f9b9bb0092bd4e1550, type: 3}
+      objectReference: {fileID: 21300000, guid: 38b3ec2508e21964dabef0127deacd1c, type: 3}
     - target: {fileID: 7437442008913822334, guid: 0bb4904ab1df9440ba0f47067c8cef10, type: 3}
       propertyPath: m_Name
       value: Player
