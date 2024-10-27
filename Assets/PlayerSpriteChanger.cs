@@ -31,24 +31,22 @@ public class PlayerMovement : MonoBehaviour
         AnimateMovement(moveHorizontal, moveVertical);
     }
 
-   public void AnimateMovement(float moveHorizontal, float moveVertical)
+  public void AnimateMovement(float moveHorizontal, float moveVertical)
 {
     Sprite[] currentSprites = null;
     bool flip = false; // Determines if we should flip the sprite
 
-    // Determine which set of sprites to use based on input
-    if (moveVertical > 0)
+    // Determine which axis has the stronger input to set priority
+    if (Mathf.Abs(moveHorizontal) > Mathf.Abs(moveVertical))
     {
-        currentSprites = upSprites;
-    }
-    else if (moveVertical < 0)
-    {
-        currentSprites = downSprites;
-    }
-    else if (moveHorizontal != 0)
-    {
-        currentSprites = rightSprites; // Always use right-facing sprites
+        // Horizontal movement takes priority
+        currentSprites = rightSprites; // Use right-facing sprites by default
         flip = moveHorizontal < 0; // Flip sprite if moving left
+    }
+    else if (Mathf.Abs(moveVertical) > 0)
+    {
+        // Vertical movement
+        currentSprites = moveVertical > 0 ? upSprites : downSprites;
     }
 
     if (currentSprites != null && currentSprites.Length > 0)
@@ -59,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentFrame = (currentFrame + 1) % currentSprites.Length; // Cycle frames
             spriteRenderer.sprite = currentSprites[currentFrame]; // Set sprite to current frame
-            spriteRenderer.flipX = flip; // Flip sprite if moving left
+            spriteRenderer.flipX = flip; // Apply flip if needed
             timer = 0f; // Reset timer
         }
     }
@@ -75,5 +73,7 @@ public class PlayerMovement : MonoBehaviour
     }
 }
 
-    }
+}
+
+    
 
