@@ -5,16 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Room1Scene.unity
+    path: Assets/Scenes/Room1.unity
     guid: 63b09769d538041a49190e711339c0ea
-  - enabled: 1
-    path: Assets/Scenes/GameWon.unity
-    guid: b50dcdf562ed24caf8cdf40cd93a2106
   - enabled: 1
     path: Assets/Scenes/GameOverTMP.unity
     guid: a9242c1f98b824cb39e85fdf6dad5c88
+  - enabled: 1
+    path: Assets/Scenes/Corridor1.unity
+    guid: 8e98f18f4388a4523b938885c812831f
+  - enabled: 1
+    path: Assets/Scenes/Room2.unity
+    guid: f550dc2f29df54240861b483bb83a820
+  - enabled: 1
+    path: Assets/Scenes/Corridor2.unity
+    guid: 441eac5cb6d194bfcb596abf9e3039b3
+  - enabled: 1
+    path: Assets/Scenes/Room3.unity
+    guid: 112a7fb6b7b354c30b4227057027ee23
+  - enabled: 1
+    path: Assets/Scenes/GameWon.unity
+    guid: b50dcdf562ed24caf8cdf40cd93a2106
   m_configObjects: {}

@@ -724,7 +724,7 @@ PrefabInstance:
     - target: {fileID: 7823203981980980865, guid: 45141f5e88699494ab8367bbd137b90a, type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+      objectReference: {fileID: 0}
     - target: {fileID: 7823203981980980865, guid: 45141f5e88699494ab8367bbd137b90a, type: 3}
       propertyPath: m_Name
       value: MirrorWall
@@ -8611,7 +8611,7 @@ PrefabInstance:
     - target: {fileID: 7823203981980980865, guid: 45141f5e88699494ab8367bbd137b90a, type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+      objectReference: {fileID: 0}
     - target: {fileID: 7823203981980980865, guid: 45141f5e88699494ab8367bbd137b90a, type: 3}
       propertyPath: m_Name
       value: Wall

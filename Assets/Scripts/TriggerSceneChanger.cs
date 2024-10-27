@@ -10,7 +10,6 @@ public class SceneChanger : MonoBehaviour
         Debug.Log(other.tag);
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered the trigger zone! Loading scene: " + sceneToLoad);
             LoadScene();
         }
     }
