@@ -6,18 +6,19 @@ public class PlayerMovement : MonoBehaviour
 
     public Sprite[] upSprites; // Array of sprites for moving up
     public Sprite[] downSprites; // Array of sprites for moving down
-    public Sprite[] leftSprites; // Array of sprites for moving left
     public Sprite[] rightSprites; // Array of sprites for moving right
 
     public float animationSpeed = 0.1f; // Time between frames
     private int currentFrame; // Current animation frame
     private float timer; // Timer to track frame updates
+    private bool lastFacingLeft; // Tracks the last direction (left or right)
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); // Automatically get the SpriteRenderer component
         currentFrame = 0;
         timer = 0f;
+        lastFacingLeft = false; // Start by facing right
     }
 
     void Update()
@@ -31,49 +32,46 @@ public class PlayerMovement : MonoBehaviour
         AnimateMovement(moveHorizontal, moveVertical);
     }
 
-  public void AnimateMovement(float moveHorizontal, float moveVertical)
-{
-    Sprite[] currentSprites = null;
-    bool flip = false; // Determines if we should flip the sprite
+    public void AnimateMovement(float moveHorizontal, float moveVertical)
+    {
+        Sprite[] currentSprites = null;
+        bool flip = lastFacingLeft; // Default to last facing direction
 
-    // Determine which axis has the stronger input to set priority
-    if (Mathf.Abs(moveHorizontal) > Mathf.Abs(moveVertical))
-    {
-        // Horizontal movement takes priority
-        currentSprites = rightSprites; // Use right-facing sprites by default
-        flip = moveHorizontal < 0; // Flip sprite if moving left
-    }
-    else if (Mathf.Abs(moveVertical) > 0)
-    {
-        // Vertical movement
-        currentSprites = moveVertical > 0 ? upSprites : downSprites;
-    }
-
-    if (currentSprites != null && currentSprites.Length > 0)
-    {
-        // Update the timer and switch frames if needed
-        timer += Time.deltaTime;
-        if (timer >= animationSpeed)
+        // Determine which axis has the stronger input to set priority
+        if (Mathf.Abs(moveHorizontal) > Mathf.Abs(moveVertical))
         {
-            currentFrame = (currentFrame + 1) % currentSprites.Length; // Cycle frames
-            spriteRenderer.sprite = currentSprites[currentFrame]; // Set sprite to current frame
-            spriteRenderer.flipX = flip; // Apply flip if needed
-            timer = 0f; // Reset timer
+            // Horizontal movement takes priority
+            currentSprites = rightSprites; // Use right-facing sprites by default
+            flip = moveHorizontal < 0; // Flip sprite if moving left
+            lastFacingLeft = flip; // Remember last facing direction
         }
-    }
-    else
-    {
-        // Reset to the first frame if no input
-        currentFrame = 0;
+        else if (Mathf.Abs(moveVertical) > 0)
+        {
+            // Vertical movement
+            currentSprites = moveVertical > 0 ? upSprites : downSprites;
+        }
+
         if (currentSprites != null && currentSprites.Length > 0)
         {
-            spriteRenderer.sprite = currentSprites[currentFrame];
+            // Update the timer and switch frames if needed
+            timer += Time.deltaTime;
+            if (timer >= animationSpeed)
+            {
+                currentFrame = (currentFrame + 1) % currentSprites.Length; // Cycle frames
+                spriteRenderer.sprite = currentSprites[currentFrame]; // Set sprite to current frame
+                spriteRenderer.flipX = flip; // Apply flip if needed
+                timer = 0f; // Reset timer
+            }
         }
-        spriteRenderer.flipX = false; // Reset flip when idle
+        else
+        {
+            // Reset to the first frame if no input, keeping last facing direction
+            currentFrame = 0;
+            if (currentSprites != null && currentSprites.Length > 0)
+            {
+                spriteRenderer.sprite = currentSprites[currentFrame];
+            }
+            spriteRenderer.flipX = lastFacingLeft; // Keep last facing direction on idle
+        }
     }
 }
-
-}
-
-    
-
