@@ -85,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 0.54, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &7163981864118274848
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a730565ae0af14063a196607dbb1b22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 6
   rb2d: {fileID: 7163981864118274848}
 --- !u!61 &3864695555960191413
 BoxCollider2D:
@@ -188,22 +188,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5293723124782735257}
   upSprites:
-  - {fileID: 21300000, guid: 326092b04395b424aa09a81f7a6aa0cf, type: 3}
+  - {fileID: 21300000, guid: 80745d2739b44ba40b1464962193ce3c, type: 3}
   - {fileID: 21300000, guid: 04cdb748767c84f4a83281e0de05c1c9, type: 3}
   - {fileID: 21300000, guid: 80745d2739b44ba40b1464962193ce3c, type: 3}
   - {fileID: 21300000, guid: 492d3ba17641fa845b0669eb6f9e6d9d, type: 3}
   downSprites:
-  - {fileID: 21300000, guid: 50a8c5a9ea1e442c3aa0baed2c5cd634, type: 3}
+  - {fileID: 21300000, guid: cdd12a0320ede3449bb4411347cc3d64, type: 3}
   - {fileID: 21300000, guid: ca3b63e6c3de93c41bb7c136211f6b37, type: 3}
   - {fileID: 21300000, guid: 48f079ffaea407340b84354401cd56bc, type: 3}
   - {fileID: 21300000, guid: 2d5c17b9e7fa8de48a695184b253563d, type: 3}
-  leftSprites:
-  - {fileID: 21300000, guid: ac62494cef91d4bf8b66d373717524ba, type: 3}
-  - {fileID: 21300000, guid: 3d465a9180b9bd043972ba1da1dd74ca, type: 3}
-  - {fileID: 21300000, guid: cdd12a0320ede3449bb4411347cc3d64, type: 3}
-  - {fileID: 21300000, guid: 38b3ec2508e21964dabef0127deacd1c, type: 3}
   rightSprites:
-  - {fileID: 21300000, guid: 88e83712082e4194eb5c7cffffc4bfab, type: 3}
+  - {fileID: 21300000, guid: cdd12a0320ede3449bb4411347cc3d64, type: 3}
   - {fileID: 21300000, guid: 3d465a9180b9bd043972ba1da1dd74ca, type: 3}
   - {fileID: 21300000, guid: cdd12a0320ede3449bb4411347cc3d64, type: 3}
   - {fileID: 21300000, guid: 38b3ec2508e21964dabef0127deacd1c, type: 3}
