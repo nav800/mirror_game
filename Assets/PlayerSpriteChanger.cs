@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite downSprite; // Sprite for moving down
     public Sprite leftSprite; // Sprite for moving left
     public Sprite rightSprite; // Sprite for moving right
+    private bool facingLeft;
 
     void Start()
     {
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void ChangeSprite(float moveHorizontal, float moveVertical)
     {
+        facingLeft = false;
+
         // Change the sprite based on the movement direction
         if (moveVertical > 0)
         {
@@ -36,11 +39,27 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (moveHorizontal < 0)
         {
-            spriteRenderer.sprite = leftSprite; // Left
+            spriteRenderer.sprite = leftSprite;
+            facingLeft = true;
+
+            if (facingLeft)
+            {
+                Vector2 localScale = transform.localScale;
+                localScale.x *= -1;
+                transform.localScale = localScale;
+            }
         }
         else if (moveHorizontal > 0)
         {
-            spriteRenderer.sprite = rightSprite; // Right
+            spriteRenderer.sprite = rightSprite;
+            facingLeft = false;
+
+            if (!facingLeft)
+            {
+                Vector2 localScale = transform.localScale;
+                localScale.x *= -1;
+                transform.localScale = localScale;
+            }
         }
     }
 }
