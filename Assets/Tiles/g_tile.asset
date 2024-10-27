@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: g_tile
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 7482667652216324306, guid: 45bb39a3b77a1489eba63d5cc08e9be9, type: 3}
-  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+  m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
   m_Transform:
     e00: 1
     e01: 0
