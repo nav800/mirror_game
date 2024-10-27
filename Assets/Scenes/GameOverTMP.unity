@@ -570,7 +570,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1600124339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58d495c728bbb7e41a511ccd7e6d6047, type: 3}
+  m_Script: {fileID: 11500000, guid: b1b38aacfe2b140dd89b66ee32965462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Menu
