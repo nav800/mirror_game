@@ -13,9 +13,7 @@ public class MirrorMovement : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-        if (Target.TryGetComponent<Rigidbody2D>(out targetRb2D)){
-            Debug.Log("2D Rigidbody found!");
-        }
+        Target.TryGetComponent<Rigidbody2D>(out targetRb2D);
 
     }
 
