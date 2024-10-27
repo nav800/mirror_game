@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5293723124782735257}
-  upSprite: {fileID: 21300000, guid: af5c641824e4d4953af140e7c70dd860, type: 3}
-  downSprite: {fileID: 21300000, guid: be52369aef4714109a2496537444ec79, type: 3}
+  upSprite: {fileID: 21300000, guid: 8129370bca4bf44289a492bf97146b3c, type: 3}
+  downSprite: {fileID: 21300000, guid: c995572fa298c492fa5a33d499019169, type: 3}
   leftSprite: {fileID: 21300000, guid: e73f7e69614c947dba54302e41f5bbed, type: 3}
   rightSprite: {fileID: 21300000, guid: ea8497b512fcc4a4f8c33d517e48808b, type: 3}
