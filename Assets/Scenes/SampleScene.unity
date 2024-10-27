@@ -577,6 +577,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3176533295624779243, guid: e4a9ee864c227456a8c387666e54a1f6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4d9e6242e09c841c0a585b871f7c5c2b, type: 3}
+    - target: {fileID: -3176533295624779243, guid: e4a9ee864c227456a8c387666e54a1f6, type: 3}
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
@@ -9253,12 +9257,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5293723124782735257, guid: 0bb4904ab1df9440ba0f47067c8cef10, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be52369aef4714109a2496537444ec79, type: 3}
+    - target: {fileID: 5293723124782735257, guid: 0bb4904ab1df9440ba0f47067c8cef10, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5293723124782735257, guid: 0bb4904ab1df9440ba0f47067c8cef10, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5293723124782735257, guid: 0bb4904ab1df9440ba0f47067c8cef10, type: 3}
       propertyPath: m_SortingLayerID
